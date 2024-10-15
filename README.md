@@ -3,8 +3,8 @@ A custom iA Writer dark mode style theme for Typora
 
 # Demo
 
-![demo](./demo.png)
-Under `Full Screen` and `Focus Mode`.
+![demo](./assets/demo.png)
+Under e`Full Screen` and `Focus Mode`.
 
 # Usage
 1. Install the `Duo` Type font
