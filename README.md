@@ -16,4 +16,3 @@ Under `Full Screen` and `Focus Mode`.
 - This `.css` file in this repo is mainly based on Typora theme [IA Typora](https://theme.typora.io/theme/IA-Typora/), github page: [ia_typora](https://github.com/sonnie-sonnig/ia_typora/)
 - The fonts are get from [here](https://github.com/iaolo/iA-Fonts)
 
-# Typora_ia_Writer_Unofficial_Theme
