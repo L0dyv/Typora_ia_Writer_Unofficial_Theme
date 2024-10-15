@@ -1,4 +1,3 @@
-README
 # Dark iA Writer Theme for Typora
 A custom iA Writer dark mode style theme for Typora
 
