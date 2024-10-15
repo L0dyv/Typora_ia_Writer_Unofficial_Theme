@@ -3,7 +3,7 @@ A custom iA Writer dark mode style theme for Typora
 
 # Demo
 
-/demo.png
+![demo](./demo.png)
 Under `Full Screen` and `Focus Mode`.
 
 # Usage
