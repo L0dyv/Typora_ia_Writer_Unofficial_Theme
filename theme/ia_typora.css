@@ -1,0 +1,222 @@
+/* 如果要隐藏Windows标题栏, 在typora的设置里找到Unibody风格即可 */
+
+/* 在文件开头添加 Google Fonts 引用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'iA Writer Duo S';
+  src: local('iA Writer Duo S');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo S';
+  src: local('iA Writer Duo S');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo S';
+  src: local('iA Writer Duo S');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo S';
+  src: local('iA Writer Duo S');
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --accent-color: #aeb1b5;
+  /* #'s before H1-3 */
+  --background-color: white;
+  --border-color: #ddd;
+  --code-bg-color: #f8f8f8;
+  --font-color: #42464c;
+  --header-color: #222324;
+  --link-color: #2077b2;
+  --control-text-color: #667176;
+  --side-bar-bg-color: #fafafa;
+  --body-font: 'iA Writer Duo S', 'TsangerJinkai04 W03', 'Noto Serif SC', 'Helvetica', '微软雅黑', -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  --border-radius: 2px;
+  --document-horizontal-margin: 80px;
+  --font-size: 15px;
+  --chinese-font-size: 16px;
+  /* 稍微增加中文字体大小 */
+  --h1-fontsize: 20px;
+  --h2-fontsize: 18px;
+  --h3-fontsize: 16px;
+  --h4-fontsize: 15px;
+  --line-height: 1.6;
+  --main-content-margin: 0 auto;
+  --monospace-font-size: 14px;
+  --monospace-font: 'iA Writer Duo S', monospace;
+  --monospace-line-height: 1.6;
+  --monospace: var(--monospace-font);
+  /* Fixes source code mode */
+  --nav-width: 200px;
+  --vertical-padding: 40px;
+}
+
+html {
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+}
+
+html,
+body {
+  color: var(--font-color);
+  font-family: var(--body-font);
+  line-height: var(--line-height);
+}
+
+body,
+#write {
+  font-family: var(--body-font);
+  font-size: var(--font-size);
+}
+
+#write {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+@media screen and (max-width: 1280px) {
+  #write {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #write {
+    max-width: 90%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #write {
+    max-width: 95%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #write {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* 微调中文字体大小 */
+:lang(zh) {
+  font-size: var(--chinese-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--body-font);
+  color: var(--header-color);
+  line-height: var(--line-height);
+}
+
+h1 {
+  font-size: var(--h1-fontsize);
+}
+
+h2 {
+  font-size: var(--h2-fontsize);
+}
+
+h3 {
+  font-size: var(--h3-fontsize);
+}
+
+h4 {
+  font-size: var(--h4-fontsize);
+}
+
+a {
+  color: var(--link-color);
+}
+
+strong {
+  color: var(--header-color);
+}
+
+code {
+  font-family: var(--monospace-font);
+  font-size: var(--monospace-font-size);
+  line-height: var(--monospace-line-height);
+}
+
+.md-fences,
+code,
+tt {
+  border: 1px solid var(--border-color);
+  background-color: var(--code-bg-color);
+  border-radius: var(--border-radius);
+  padding: 2px 4px 0px 4px;
+  font-size: 0.9em;
+}
+
+.md-fences {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+/* 目录样式 */
+.md-toc {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* 引用块样式 */
+blockquote {
+  border-left: 4px solid var(--border-color);
+  padding: 0 15px;
+  color: var(--accent-color);
+}
+
+/* 表格样式 */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  border-color: var(--border-color);
+}
+
+table th,
+table td {
+  border: 1px solid var(--border-color);
+  padding: 6px 13px;
+}
+
+
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
