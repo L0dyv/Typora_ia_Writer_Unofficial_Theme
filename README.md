@@ -1,15 +1,11 @@
 # Dark iA Writer Theme for Typora
-A custom iA Writer dark mode style theme for Typora
+Typora仿iA Writer主题
 
 # Demo
 
-![demo](./assets/demo.png)
-Under `Full Screen` and `Focus Mode`.
+![demo](./assets/demo_cn.png)
 
-# Usage
-1. Install the `Duo` Type font
-2. add .css file to your Typora theme folder(Go to `Files`->`Preference`->`Appearance`->`Open Theme Tolder`)
-3. Restart Typora
+> 注: 截图中用了[Typora_plugin](https://github.com/obgnail/typora_plugin)插件
 
 # Acknowledgements
 - This `.css` file in this repo is mainly based on Typora theme [IA Typora](https://theme.typora.io/theme/IA-Typora/), github page: [ia_typora](https://github.com/sonnie-sonnig/ia_typora/)
