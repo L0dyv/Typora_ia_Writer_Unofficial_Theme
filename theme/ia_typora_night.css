@@ -3,61 +3,39 @@
 @import 'night/sourcemode.dark.css';
 @import 'ia_typora.css';
 
-@font-face {
-  font-family: 'iA Writer Duo S';
-  src: local('iA Writer Duo S');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iA Writer Duo S';
-  src: local('iA Writer Duo S');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'iA Writer Duo S';
-  src: local('iA Writer Duo S');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iA Writer Duo S';
-  src: local('iA Writer Duo S');
-  font-weight: bold;
-  font-style: italic;
-}
-
 :root {
+  /* 暗色主题颜色变量 */
   --accented-background-color: #1e1e1e;
-  --light-header-color: #dbdbdb; /* H1-H3 */
+  --light-header-color: #dbdbdb;
   --select-text-bg-color: #186a9a;
-  --accent-color: #4f525a;
   --background-color: #101010;
   --font-color: #808e95;
-  --header-color: #bebebe; /* H4-H6 */
+  --header-color: #bebebe;
   --border-color: #232629;
-  --link-color: #5584aa; 
+  --link-color: #5584aa;
   --code-bg-color: #1c1a1a;
-  --hover-bg-color: #050505; 
-  --control-text-color: var(--font-color); 
+  --hover-bg-color: #050505;
+
+  /* 继承日间模式结构 */
+  --control-text-color: var(--font-color);
   --side-bar-bg-color: var(--accented-background-color);
-  --control-text-hover-color: var(--header-color);
-  --item-hover-text-color: var(--header-color);
-  --item-hover-bg-color: var(--hover-bg-color); 
-  --bg-color: var(--background-color);
-  --text-color: var(--font-color);
-  --meta-content-color: var(--accent-color);
-  --md-char-color: var(--accent-color);
-  --window-border: 1px solid rgba(0,0,0,.07);
-  --active-file-bg-color: var(--hover-bg-color);
-  --ia-writer-font: 'iA Writer Duo S', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  --base-font-size: 15px; 
+  --document-horizontal-margin: 80px;
+  --chinese-font-size: 16px;
+  --h1-fontsize: 20px;
+  --h2-fontsize: 18px;
+  --h3-fontsize: 16px;
+  --h4-fontsize: 15px;
+  --line-height: 1.6;
+  --monospace-font-size: 14px;
+  --monospace-line-height: 1.6;
+  --border-radius: 2px;
+
+  /* 统一字体配置 */
+  --body-font: 'iA Writer Duo S', 'TsangerJinkai04 W03', 'Noto Serif SC', 'Helvetica', '微软雅黑', -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-font: 'iA Writer Duo S', monospace;
 }
 
+/* 暗色模式特有样式 */
 .outline-item:hover {
   background-color: var(--hover-bg-color);
 }
@@ -72,13 +50,65 @@ h3 {
   color: var(--light-header-color);
 }
 
-mark {
-  background: #b8b80a
-}
-
 table tr:nth-child(2n),
 thead {
-    background-color: #141313;
+  background-color: #141313;
+}
+
+/* 保留所有日间模式的布局规则 */
+#write {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+@media screen and (max-width: 1280px) {
+  #write {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #write {
+    max-width: 90%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #write {
+    max-width: 95%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #write {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* 暗色模式覆盖样式 */
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+
+.context-menu {
+  background-color: #141313;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: #4f525a !important;
+}
+
+mark {
+  background: #b8b80a
 }
 
 sup.md-footnote {
@@ -87,25 +117,17 @@ sup.md-footnote {
 }
 
 /* right click menu */
-.context-menu {
-  background-color: #141313;
-}
-
 .context-menu.dropdown-menu .divider {
   background-color: #232629;
 }
 
 /* focus mode */
-.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
-  color: #4f525a !important;
-}
-
 .on-focus-mode .md-end-block:not(.md-focus) img,
 .on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
   opacity: #4f525a !important;
 }
 
-.on-focus-mode li[cid]:not(.md-focus-container){
+.on-focus-mode li[cid]:not(.md-focus-container) {
   color: #4f525a;
 }
 
@@ -123,16 +145,10 @@ sup.md-footnote {
   color: #4f525a !important;
 }
 
-body, #write {
-  font-family: var(--ia-writer-font);
-  font-size: var(--base-font-size);
-}
-
+body,
 #write {
-  max-width: 80%;
-  margin: 0 auto;
-  padding-left: 180px;
-  padding-right: 180px;
+  font-family: var(--body-font);
+  font-size: var(--chinese-font-size);
 }
 
 @media screen and (max-width: 1024px) {
